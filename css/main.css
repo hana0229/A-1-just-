@@ -1,0 +1,270 @@
+@charset "utf-8";
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+ul,ol,li{list-style: none;}
+body{
+    font-family: "돋움";
+    font-size: 14px;
+    color: #222328;
+    background-color: #ffffff;
+}
+
+#wrap{
+    width: 1200px;
+    margin: 0 auto;
+    /* height: 700px;
+    background-color: #ddd; */
+}
+
+/* header 영역 */
+#header{
+    height: 100px;
+    /* background: #ccc; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo{
+    width: 200px;
+    height: 40px;
+}
+
+.nav{}
+.main{}
+.main>li{
+    float: left;
+    position: relative;
+}
+.main>li>a{
+    display: block;
+    width: 150px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    background-color: rgb(196, 178, 153);
+    font-size: 16px;
+    font-weight: bold;
+}
+.main>li:hover>a{
+    background-color: darkgoldenrod;
+    color: white;
+}
+
+.sub{
+    position: absolute;
+    top: 50px;
+    left: 0;
+    /* border: 1px solid black; */
+    width: 100%;
+    display: none;
+    z-index: 100;
+}
+.sub li{}
+.sub li a{
+    display: block;
+    text-align: center;
+    height: 40px;
+    line-height: 40px;
+    background-color: rgb(87, 62, 0);
+    color: white;
+}
+.sub li a:hover{
+    background-color: rgb(196, 178, 153);
+}
+
+/* section 영역 */
+#section{
+    height: 500px;
+    /* background: #aaa; */
+}
+
+.slide_img{
+    height: 300px;
+    /* background: yellow; */
+    position: relative;
+    overflow: hidden;
+}
+.move{
+    position: absolute;
+    width: 1200px;
+    height: 900px;
+    left: 0;
+    top: 0;
+}
+.move li{
+    width: 1200px;
+    height: 300px;
+}
+
+.container{
+    height: 200px;
+    display: flex;
+    justify-content: space-between;
+}
+.container>div{
+    height: 200px;
+    width: 390px;
+    /* border: 1px solid black; */
+    position: relative;
+}
+.container h2{
+    width: 100px;
+    height: 35px;
+    background-color: #fff;
+    font-size: 14px;
+    text-align: center;
+    line-height: 35px;
+    border: 1px solid gray;
+    border-bottom-color: #fff;
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    border-radius: 10px 10px 0 0;
+}
+.container h2.off{
+    background-color: #ddd;
+}
+
+.noti_gall{}
+.noti_gall ul{
+    position: absolute;
+    top: 34px;
+    left: 0;
+    height: 166px;
+    width: 390px;
+    border: 1px solid gray;
+    background-color: white;
+    border-radius: 0 10px 10px 10px;
+}
+.notice{}
+.notice ul{
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* display: none; */
+}
+.notice ul li{
+    padding: 8px 0;
+    overflow: hidden;
+    border-bottom: 1px dotted #ddd;
+}
+.notice ul li a{
+    display: block;
+    width: 70%;
+    font-size: 12px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    float: left;
+}
+.notice ul li span{
+    float: right;
+    font-size: 12px;
+}
+
+.gallery{}
+.gallery ul{
+    display: none;
+    padding: 10px;
+    /* display: flex; */
+    justify-content: space-between;
+    align-items: center;
+}
+.gallery ul li{}
+.gallery ul li a{}
+.gallery ul li a img{}
+
+.gallery h2{
+    left: 100px;
+}
+
+.banner{}
+
+.baro{}
+
+.banner p, .baro p{
+    width: 390px;
+    height: 166px;
+    /* h2 높이35 */
+    border: 1px solid gray;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 34px;
+    left: 0;
+    z-index: 4;
+    border-radius: 0 10px 10px 10px;
+}
+
+
+/* footer 영역 */
+#footer{
+    height: 100px;
+    /* background-color: #ccc; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+}
+
+.f_logo{
+    /* border-right: 1px solid #ddd; */
+}
+
+.copy{}
+
+.sns{}
+.sns a{
+    padding-left: 10px;
+}
+
+/* pop */
+.pop{
+    width: 500px;
+    height: 400px;
+    background-color: white;
+    border: 1px solid black;
+    padding: 30px;
+    position: absolute;
+    left: 50%;
+    top: 30%;
+    transform: translate(-50%, -50%);
+    z-index: 200;
+    display: none;
+}
+
+.pop h3{
+    font-size: 20px;
+    line-height: 30px;
+    border-bottom: 1px dotted gray;
+    text-transform: capitalize;
+}
+.pop p{
+    padding-top: 20px;
+    line-height: 2;
+    text-align: justify;
+}
+.pop p::first-letter{
+    font-size: 20px;
+    font-weight: bold;
+}
+.pop .close{
+    position: absolute;
+    right: 30px;
+    bottom: 20px;
+    cursor: pointer;
+    padding: 5px 10px;
+}
